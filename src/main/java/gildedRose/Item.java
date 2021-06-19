@@ -2,6 +2,8 @@ package gildedRose;
 
 public class Item {
 
+    public static final int MINIMUM_QUALITY = 0;
+    public static final int MAXIMUM_QUALITY = 50;
     public String name;
 
     public int sell_in;
@@ -28,14 +30,22 @@ public class Item {
     }
 
     protected void updateQuality() {
-        if (quality > 0) {
+        decreaseQuality();
+    }
+
+    protected void updateQualityAfterExpired() {
+        decreaseQuality();
+    }
+
+    private void decreaseQuality() {
+        if (quality > MINIMUM_QUALITY) {
             quality = quality - 1;
         }
     }
 
-    protected void updateQualityAfterExpired() {
-        if (quality > 0) {
-            quality = quality - 1;
+    protected void increaseQuality() {
+        if (quality < MAXIMUM_QUALITY) {
+            quality = quality + 1;
         }
     }
 
