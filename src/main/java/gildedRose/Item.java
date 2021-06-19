@@ -21,9 +21,7 @@ public class Item {
 
     void updateSellInAndQuality() {
         updateQuality();
-
         updateSellIn();
-
         if (isExpired()) {
             updateQualityAfterExpired();
         }
@@ -45,21 +43,7 @@ public class Item {
         return sell_in < 0;
     }
 
-    private void updateSellIn() {
-        if (!isSulfuras()) {
-            sell_in = sell_in - 1;
-        }
-    }
-
-    protected boolean isSulfuras() {
-        return false;
-    }
-
-    protected boolean isBackStagePass() {
-        return false;
-    }
-
-    protected boolean isAgedBrie() {
-        return false;
+    protected void updateSellIn() {
+        sell_in = sell_in - 1;
     }
 }
