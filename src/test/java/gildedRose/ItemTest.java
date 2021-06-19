@@ -39,7 +39,7 @@ class ItemTest {
 
     @Test
     void should_quality_increase_when_pass_one_day_given_aged_brie() {
-        Item item = new Item("Aged Brie", 2, 0);
+        Item item = new AgedBrie(2, 0);
 
         item.updateSellInAndQuality();
 
@@ -49,7 +49,7 @@ class ItemTest {
 
     @Test
     void should_quality_no_change_when_pass_one_day_given_aged_brie_and_quality_is_maximum() {
-        Item item = new Item("Aged Brie", 2, 50);
+        Item item = new AgedBrie(2, 50);
 
         item.updateSellInAndQuality();
 
@@ -59,7 +59,7 @@ class ItemTest {
 
     @Test
     void should_quality_and_sell_in_no_change_when_pass_one_day_given_sulfuras() {
-        Item item = new Item("Sulfuras, Hand of Ragnaros", 2, 50);
+        Item item = new Sulfuras(2, 50);
 
         item.updateSellInAndQuality();
 
