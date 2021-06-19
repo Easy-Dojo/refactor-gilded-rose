@@ -59,14 +59,10 @@ public class Item {
     }
 
     protected void updateQualityAfterExpired() {
-        if (!isBackStagePass()) {
-            if (quality > 0) {
-                if (!isSulfuras()) {
-                    quality = quality - 1;
-                }
+        if (quality > 0) {
+            if (!isSulfuras()) {
+                quality = quality - 1;
             }
-        } else {
-            quality = 0;
         }
     }
 

@@ -9,4 +9,9 @@ public class BackStagePass extends Item {
     protected boolean isBackStagePass() {
         return true;
     }
+
+    @Override
+    protected void updateQualityAfterExpired() {
+        quality = 0;
+    }
 }
