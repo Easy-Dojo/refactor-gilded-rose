@@ -69,7 +69,7 @@ class ItemTest {
 
     @Test
     void should_quality_increase_1_when_pass_one_day_given_back_stage_pass_and_sell_in_more_than_10() {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 20, 10);
+        Item item = new BackStagePass(20, 10);
 
         item.updateSellInAndQuality();
 
@@ -79,7 +79,7 @@ class ItemTest {
 
     @Test
     void should_quality_increase_2_when_pass_one_day_given_back_stage_pass_and_sell_in_less_than_10() {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 10, 10);
+        Item item = new BackStagePass(10, 10);
 
         item.updateSellInAndQuality();
 
@@ -89,7 +89,7 @@ class ItemTest {
 
     @Test
     void should_quality_increase_3_when_pass_one_day_given_back_stage_pass_and_sell_in_less_than_5() {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 10);
+        Item item = new BackStagePass(5, 10);
 
         item.updateSellInAndQuality();
 
@@ -99,7 +99,7 @@ class ItemTest {
 
     @Test
     void should_quality_keep_when_pass_one_day_given_back_stage_pass_and_quality_is_maximum() {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 20, 50);
+        Item item = new BackStagePass(20, 50);
 
         item.updateSellInAndQuality();
 
@@ -109,7 +109,7 @@ class ItemTest {
 
     @Test
     void should_quality_change_0_when_pass_one_day_given_back_stage_pass_and_is_expired() {
-        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 0, 50);
+        Item item = new BackStagePass(0, 50);
 
         item.updateSellInAndQuality();
 
