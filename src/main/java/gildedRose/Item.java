@@ -60,9 +60,7 @@ public class Item {
 
     protected void updateQualityAfterExpired() {
         if (quality > 0) {
-            if (!isSulfuras()) {
-                quality = quality - 1;
-            }
+            quality = quality - 1;
         }
     }
 
